@@ -10,28 +10,29 @@
     <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/exchangeStyles.css" media="screen">
   </head>
+
   <body>
     <section class="page-header">
       <h1 class="project-name">FlowJo Exchange </h1>
-      <h2 class="project-tagline">Unleash your analysis using FlowJo as a platform.</h2>
+      <h2 class="project-tagline">Unleash your analysis using FlowJo&trade; as a platform.</h2>
     </section>
 
     <section class="main-content">
       <h1>
 <a id="welcome-to-the-exchange" class="anchor" href="#welcome-to-the-exchange" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Welcome to the Exchange</h1>
 
-<p>The FlowJo Exchange is a repository that allows users to upload annotated scripts and download shared scripts. Plugins are a new addition to the Exchange that allow users to create their own extended functionality for the FlowJo application. The open plugin architecture of 10.1r7 allows FlowJo users access to cutting-edge tools that can be integrated into their current FlowJo analysis workflows, so any tool can be integrated into FlowJo.</p>
+<p>The FlowJo Exchange is a repository that allows users to upload annotated scripts and download shared scripts. Plugins are a new addition to the Exchange that allow users to create their own extended functionality for the FlowJo application. The open plugin architecture introduced with 10.1r7 allows FlowJo users access to cutting-edge tools that can be integrated into their current FlowJo analysis workflows, so any tool can be integrated into FlowJo.</p>
 
 <p>Don't worry, we are pretty obsessive about documentation. Each script, plugin, or visualization we provide includes instructions that step you through how to use it, and we urge others who post to do the same. No JavaScript, HTML, or black belt skills are required.</p>
 
-<h2>Featured: Auto-Gating Plugin</h2>
+<h2>Featured: FlowClean Plugin</h2>
 
-<p>The Auto-Gating plugin allows FlowJo users to make distinct gates around their samples based on child-parent percentages. The plugin generates an optimal sub-population that matches a user's specified percentage. It does this by implementing contour gates around the parent population and checking the resulting ratio of child-to-parent populations. It repeats this process until it finds the child population count that is closest to the user's.</p>
+<p>The FlowClean plugin is an algorithm that automatically identifies and flags fluorescence anomalies in flow cytometry data so that these can be easily removed. The FlowClean algorithm utilizes the R statistical computing environment and integrates FlowClean’s functionality into FlowJo. The algorithm performs calculations on the provided samples, and creates a new population with fluorescence anomalies removed.</p>
 <p>
 <table>
 <tr>
-  <td style="border:0px"><img id="autoGatingPluginIcon_Feature" src="iconRef"></img></td>
-<td style="border:0px" valign="top"><a href="https://github.com/FlowJo-LLC/AutoGating-Plugin">Download the plugin now</a>
+  <td style="border:0px"><img id="FlowCleanPluginIcon_Feature" src="iconRef"></img></td>
+<td style="border:0px" valign="top"><a href="https://github.com/FlowJo-LLC/flowClean-Plugin">Download the plugin now</a>
   <br>
 <a href="https://www.gitbook.com/book/flowjollc/auto-gating-plugin-documentation/details">View the plugin documentation</a></td>
 </tr>
@@ -46,12 +47,12 @@
 <h2>
 <a id="2-plug-ins" class="anchor" href="#2-plug-ins" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>1. Plugins (NEW)</h2>
 
-<p>Yeah, we can cluster that.  If you have an algorithm or application that needs to do something upon opening or saving OR you would like exported population data and user-specified parameters passed to your application, we can do that.  In fact, we can bring the clusters back into FlowJo so everyone can use what you have written.  To learn more, please see our FlowJo for developers page (coming soon). </p>
+<p>Yeah, we can cluster that.  If you have an algorithm or application that needs to do something upon opening or saving, OR you would like exported population data and user-specified parameters passed to your application, we can do that.  In fact, we can bring the clusters back into FlowJo so everyone can use what you have written.  To learn more, please see our FlowJo for developers page (coming soon). </p>
 
 <p><strong>Note:</strong> You must be running FlowJo version 10.1r7 or higher to use plugins. Earlier versions do not support plugins.</p>
 
 <h3>Example Plugins</h3>
-<p>See the following <a href="https://www.gitbook.com/search?q=FlowJo">examples</a> for plugin development and documentation done well.</p>
+<p>See these <a href="https://www.gitbook.com/search?q=FlowJo">examples</a> for plugin development and documentation done well.</p>
 
 <h3>How to Install FlowJo Plugins</h3>
 
@@ -61,8 +62,8 @@
 <li>By default, this is the Applications > Plugins folder for Macintosh computers, and the Program Files > FlowJo > Plugins folder for Windows PCs.</li>
 <li>To designate a different folder for plugins, see <a href="http://docs.flowjo.com/d2/plugins/installing-plugins/">Installing Plugins</a>, Step 4.</li>
 </ul>
-<li>Follow the link below for the desired plugin.</li>
-<li>In the file list, click the link for the file ending in .jar, then click Download.</li>
+<li>Follow the link on this page for the desired plugin.</li>
+<li>In the file list, click the link for the file ending in .jar, then click the Download button.</li>
 <li>In the Downloads folder on your computer, locate the downloaded JAR file on your computer, and move it into the Plugins folder.</li>
 <li>Re-start FlowJo.</li>
 </ul>
@@ -71,20 +72,23 @@ The plugin should now be ready for use. Most plugins are accessed from the Works
 
 <h3>Available Plugins</h3>
 
+  <p id="pluginListing"><img id="FlowCleanPluginIcon"  src="iconRef"</img> <a href="https://github.com/FlowJo-LLC/flowClean-Plugin">FlowClean</a>: Automatically identifies and flags fluorescence anomalies in flow cytometry data so that these can be easily removed. This algorithm uses the R statistical computing environment.
+      <br><small><font color="CCCCCC">Image credit: <a href="https://thenounproject.com/search/?q=spray+bottle&i=7154">Julieta Felix, <a href="https://thenounproject.com">The Noun Project</a>, <a href="http://creativecommons.org/licenses/by/3.0/us/">Creative Commons</a> license.</font></small></p></p>
+
   <p id="pluginListing"><img id="emailNotificationPluginIcon"  src="iconRef"</img> <a href="https://github.com/FlowJo-LLC/EmailNotification-Plugin">Email Notification</a>: Sends auto-generated email notifications when a FlowJo client workspace is saved. This plugin promotes communication about changes to the FlowJo workspace. Email notifications may be sent to recipients when the FlowJo workspace is saved in the FlowJo client.
-  <br><small><font color="CCCCCC">Image credit: Jim Slatton, <a href="https://thenounproject.com">The Noun Project</a>, <a href="http://creativecommons.org/licenses/by/3.0/us/">Creative Commons</a> license.</font></small></p>
+  <br><small><font color="CCCCCC">Image credit: <a href="https://thenounproject.com/jim.slatton.1/">Jim Slatton, <a href="https://thenounproject.com">The Noun Project</a>, <a href="http://creativecommons.org/licenses/by/3.0/us/">Creative Commons</a> license.</font></small></p>
 
   <p id="pluginListing"><img id="autoGatingPluginIcon"  src="iconRef"></img> <a href="https://github.com/FlowJo-LLC/AutoGating-Plugin">Auto-Gating</a>: Allows FlowJo users to make distinct gates around their samples based on child-parent percentages. This plugin generates an optimal sub-population that matches a user's specified percentage.
-  <br><br><small><font color="CCCCCC">Image credit: Alfredo Hernandez, <a href="https://thenounproject.com">The Noun Project</a>, <a href="http://creativecommons.org/licenses/by/3.0/us/">Creative Commons</a> license.</font></small></p>
+  <br><small><font color="CCCCCC">Image credit: <a href="https://thenounproject.com/AlfredoCreates/">Alfredo Hernandez, <a href="https://thenounproject.com">The Noun Project</a>, <a href="http://creativecommons.org/licenses/by/3.0/us/">Creative Commons</a> license.</font></small></p>
 
   <p id="pluginListing"> <img id="opticsPluginIcon"  src="iconRef"></img> <a href="https://github.com/FlowJo-LLC/OPTICS-Plugin">OPTICS</a>: Allows users to perform density-based reordering and cluster detection on populations within FlowJo. This population plugin performs density-based reordering and cluster detection to extract the clusters present in a population node. The user may select what parameters they wish to cluster the data on.
-  <br><small><font color="CCCCCC">Image credit: Dolwar Hossein, <a href="https://thenounproject.com">The Noun Project</a>, <a href="http://creativecommons.org/licenses/by/3.0/us/">Creative Commons</a> license.</font></small></p>
+  <br><small><font color="CCCCCC">Image credit: <a href="https://thenounproject.com/delwar/">Delwar Hossain, <a href="https://thenounproject.com">The Noun Project</a>, <a href="http://creativecommons.org/licenses/by/3.0/us/">Creative Commons</a> license.</font></small></p>
 
   <p id="pluginListing"><img id="awsS3PluginIcon"  src="iconRef"></img> <a href="https://github.com/FlowJo-LLC/FlowJo-AWS-S3-Plugin">AWS-S3</a>: Uploads FlowJo workspace files to an AWS S3 server. Using the AWS S3 service with FlowJo gives one the ability to upload and download workspaces as a remote backup or share workspace environments with others. The user attaches his or her workspace to a specific S3 bucket, and the workspace is uploaded to this bucket when the workspace is saved.
-  <br><small><font color="CCCCCC">Image credit: ProSymbols, <a href="https://thenounproject.com">The Noun Project</a>, <a href="http://creativecommons.org/licenses/by/3.0/us/">Creative Commons</a> license.</font></small></p>
+  <br><small><font color="CCCCCC">Image credit: <a href="https://thenounproject.com/prosymbols/">ProSymbols, <a href="https://thenounproject.com">The Noun Project</a>, <a href="http://creativecommons.org/licenses/by/3.0/us/">Creative Commons</a> license.</font></small></p>
 
   <p id="pluginListing"><img id="LIMSPluginIcon"  src="iconRef"></img> <a href="https://github.com/FlowJo-LLC/LIMS-Integrator-Plugin">LIMS Integrator</a>: Provides PostgreSQL integration with FlowJo for lab management purposes. This plugin allows for the integration of user information associated with a FlowJo workspace and a PostgreSQL database. Except for the initial setup of a PostgreSQL server, all other setup is handled through the plugin, such as database and table creation.
-  <br><small><font color="CCCCCC">Image credit: Alfredo Hernandez, <a href="https://thenounproject.com">The Noun Project</a>, <a href="http://creativecommons.org/licenses/by/3.0/us/">Creative Commons</a> license.</font></small></p>
+  <br><small><font color="CCCCCC">Image credit: <a href="https://thenounproject.com/AlfredoCreates/">Alfredo Hernandez, <a href="https://thenounproject.com">The Noun Project</a>, <a href="http://creativecommons.org/licenses/by/3.0/us/">Creative Commons</a> license.</font></small></p>
 
   <h2>
   <a id="1-scripts" class="anchor" href="#1-scripts" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>2. Scripts</h2>
@@ -99,13 +103,15 @@ The plugin should now be ready for use. Most plugins are accessed from the Works
 
   <h3>Available Scripts</h3>
 
-  <ul>
-  <li><p><a href="https://github.com/FlowJo-LLC/indexed-sorting">Indexed Sorting</a>: Compiles index sorting keywords and creates a gate for each cell, with the well location as the name.</p></li>
-  <li><p><a href="https://github.com/FlowJo-LLC/Basic-Loop">Basic Loop</a>: Basic loop tool in JavaScript to initialize a new project from.</p></li>
-  <li><p><a href="https://github.com/FlowJo-LLC/Collection-order-sort">Collection Order Sort</a>: Creates a sortable keyword based on day-month-year metadata.</p></li>
-  <li><p><a href="https://github.com/FlowJo-LLC/ControlBasedInclusionGating">Control Based Inclusion Gating</a>: Automatically creates "positive gates" using control samples' properties</p></li>
-  <li><p><a href="https://github.com/FlowJo-LLC/Relative-gate">Relative Gate</a>: Creates a gate relative to a pre-defined (negative) population.</p></li>
-  </ul>
+  <p id="pluginListing"><img id="IndexSortingIcon"  src="iconRef"></img><a href="https://github.com/FlowJo-LLC/indexed-sorting">Indexed Sorting</a>: Compiles index sorting keywords and creates a gate for each cell, with the well location as the name.<br><small><font color="CCCCCC">Image credit: <a href="https://thenounproject.com">The Noun Project</a>, <a href="http://creativecommons.org/licenses/by/3.0/us/">Creative Commons</a> license.</font></small></p><br>
+
+  <p id="pluginListing"><img id="BasicLoopIcon"  src="iconRef"></img><a href="https://github.com/FlowJo-LLC/Basic-Loop">Basic Loop</a>: Basic loop tool in JavaScript to initialize a new project from.<br><small><font color="CCCCCC">Image credit: <a href="https://thenounproject.com/rflor/">Rflor, <a href="https://thenounproject.com">The Noun Project</a>, <a href="http://creativecommons.org/licenses/by/3.0/us/">Creative Commons</a> license.</font></small></p><br><br>
+
+  <p id="pluginListing"><img id="CollectionOrderSortIcon"  src="iconRef"></img><a href="https://github.com/FlowJo-LLC/Collection-order-sort">Collection Order Sort</a>: Creates a sortable keyword based on day-month-year metadata.<br><small><font color="CCCCCC">Image credit: <a href="https://thenounproject.com/demograph/">Demograph, <a href="https://thenounproject.com">The Noun Project</a>, <a href="http://creativecommons.org/licenses/by/3.0/us/">Creative Commons</a> license.</font></small></p><br>
+
+  <p id="pluginListing"><img id="ControlBasedInclusionGatingIcon"  src="iconRef"></img><a href="https://github.com/FlowJo-LLC/ControlBasedInclusionGating">Control Based Inclusion Gating</a>: Automatically creates "positive gates" using control samples' properties.<br><small><font color="CCCCCC">Image credit: <a href="https://thenounproject.com">The Noun Project</a>, <a href="http://creativecommons.org/licenses/by/3.0/us/">Creative Commons</a> license.</font></small></p><br>
+
+  <p id="pluginListing"><img id="RelativeGateIcon"  src="iconRef"></img><a href="https://github.com/FlowJo-LLC/Relative-gate">Relative Gate</a>: Creates a gate relative to a pre-defined (negative) population.<br><small><font color="CCCCCC">Image credit: <a Href="https://thenounproject.com/rflor/">Rflor, <a href="https://thenounproject.com">The Noun Project</a>, <a href="http://creativecommons.org/licenses/by/3.0/us/">Creative Commons</a> license.</font></small></p><br><br>
 
 
 <h2>
@@ -172,7 +178,15 @@ The plugin should now be ready for use. Most plugins are accessed from the Works
             document.getElementById("opticsPluginIcon").src = newUrl + "/images/Optics.png";
             document.getElementById("awsS3PluginIcon").src = newUrl + "/images/FlowJo-AWS-S3.png";
             document.getElementById("LIMSPluginIcon").src = newUrl + "/images/LIMS-Integrator.png";
-            document.getElementById("autoGatingPluginIcon_Feature").src = newUrl + "/images/AutoGating.png";
+
+            document.getElementById("FlowCleanPluginIcon_Feature").src = newUrl + "/images/FlowClean.png";
+
+            document.getElementById("FlowCleanPluginIcon").src = newUrl + "/images/FlowClean.png";
+            document.getElementById("IndexSortingIcon").src = newUrl + "/images/Clustering.png";
+            document.getElementById("BasicLoopIcon").src = newUrl + "/images/Miscellaneous.png";
+            document.getElementById("CollectionOrderSortIcon").src = newUrl + "/images/AnnotationTools.png";
+            document.getElementById("ControlBasedInclusionGatingIcon").src = newUrl + "/images/DataReductionAlgorithms.png";
+            document.getElementById("RelativeGateIcon").src = newUrl + "/images/DataPreprocAndNorm.png";
 
 
           </script>
