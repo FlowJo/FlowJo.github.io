@@ -4,3 +4,34 @@
   margin-right: 20px;
   margin-left: 30px;
 }
+
+.container {
+  margin: 0 auto;
+  width: 840px;
+}
+
+.scriptorplugin-row {
+  width: 100%;
+  min-height: 100px;
+  margin-bottom: 20px;
+}
+
+.scriptorplugin-left-column {
+  display: inline-block;
+  float: left;
+}
+
+.scriptorplugin-right-column {
+  width: 680px;
+  display: inline-block;
+  padding: 0 0 16px 0
+}
+
+.image-class {
+  width: 100px;
+  height: 100px;
+}
+
+.align-left {
+  align: left;
+}
