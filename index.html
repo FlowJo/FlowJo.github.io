@@ -25,16 +25,16 @@
 
 <p>Don't worry, we are pretty obsessive about documentation. Each script, plugin, or visualization we provide includes instructions that step you through how to use it, and we urge others who post to do the same. No JavaScript, HTML, or black belt skills are required.</p>
 
-<h2>Featured: FlowClean Plugin</h2>
 
-<p>The FlowClean plugin is an algorithm that automatically identifies and flags fluorescence anomalies in flow cytometry data so that these can be easily removed. The FlowClean algorithm utilizes the R statistical computing environment and integrates FlowClean’s functionality into FlowJo. The algorithm performs calculations on the provided samples, and creates a new population with fluorescence anomalies removed.</p>
-<p><strong>Note:</strong> FlowClean is a third-party plugin. Support for this plugin may be limited.</p>
+<h2>Featured: Optics Plugin</h2>
+
+<p>The OPTICS plugin performs density-based reordering and cluster detection to extract the clusters present in a population node. The user may select what parameters they wish to cluster the data on. The user may also specify the minimum points the algorithm requires to define a cluster, and the percent drop (ξ) that will signify the start of a new cluster. The clusters found will appear as sub-populations under the population on which the plugin was run.</p>
 <table>
 <tr>
-  <td style="border:0px"><img id="FlowCleanPluginIcon_Feature" src="iconRef"></img></td>
-<td style="border:0px" valign="top"><a href="https://github.com/FlowJo-LLC/flowClean-Plugin">Download the plugin now</a>
+  <td style="border:0px"><img id="OpticsPluginIcon_Feature" src="iconRef"></img></td>
+<td style="border:0px" valign="top"><a href="https://github.com/FlowJo-LLC/OPTICS-Plugin">Download the plugin now</a>
   <br>
-<a href="https://www.gitbook.com/book/flowjollc/flowclean-plugin-documentation/details">View the plugin documentation</a></td>
+<a href="https://www.gitbook.com/book/flowjollc/optics-plugin-developer-documentation/details">View the plugin documentation</a></td>
 </tr>
 </table
 </p>
@@ -42,7 +42,7 @@
 
 <h1><a id="there-are-3-types-of-tools-you-will-find-here-which-can-all-be-used-with-flowjo" class="anchor" href="#there-are-3-types-of-tools-you-will-find-here-which-can-all-be-used-with-flowjo" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Tool types</h1>
 
-<p>There are three types of tools here, which can all be used with FlowJo.</p>
+<p>There are four types of tools here, which can all be used with FlowJo.</p>
 
 <h2>
 <a id="2-plug-ins" class="anchor" href="#2-plug-ins" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>1. Plugins (NEW)</h2>
@@ -75,6 +75,45 @@ The plugin should now be ready for use. Most plugins are accessed from the Works
 <div class="container">
 
   <div class="scriptorplugin-row" id="pluginListing">
+      <div class="scriptorplugin-left-column">
+      <img class="image-class" id="autoGatingPluginIcon"  src="iconRef"></img>
+    </div>
+    <div class="scriptorplugin-right-column">
+      <a href="https://github.com/FlowJo-LLC/AutoGating-Plugin">Auto-Gating</a>: Allows FlowJo users to make distinct gates around their samples based on child-parent percentages. This plugin generates an optimal sub-population that matches a user's specified percentage.<br>
+      <small><font color="CCCCCC">Image credit:
+        <a href="https://thenounproject.com/AlfredoCreates/">Alfredo Hernandez</a>,
+        <a href="https://thenounproject.com">The Noun Project</a>,
+        <a href="http://creativecommons.org/licenses/by/3.0/us/">Creative Commons</a> license.</font></small>
+      </div>
+    </div>
+
+    <div class="scriptorplugin-row" id="pluginListing">
+        <div class="scriptorplugin-left-column">
+        <img class="image-class" id="awsS3PluginIcon"  src="iconRef"></img>
+      </div>
+      <div class="scriptorplugin-right-column">
+        <a href="https://github.com/FlowJo-LLC/FlowJo-AWS-S3-Plugin">AWS-S3</a>: Uploads FlowJo workspace files to an AWS S3 server. Using the AWS S3 service with FlowJo gives one the ability to upload and download workspaces as a remote backup or share workspace environments with others. The user attaches his or her workspace to a specific S3 bucket, and the workspace is uploaded to this bucket when the workspace is saved.<br>
+        <small><font color="CCCCCC">Image credit:
+          <a href="https://thenounproject.com/prosymbols/">ProSymbols</a>,
+          <a href="https://thenounproject.com">The Noun Project</a>,
+          <a href="http://creativecommons.org/licenses/by/3.0/us/">Creative Commons</a> license.</font></small>
+        </div>
+      </div>
+
+      <div class="scriptorplugin-row" id="pluginListing">
+          <div class="scriptorplugin-left-column">
+            <img class="image-class" id="emailNotificationPluginIcon"  src="iconRef"></img>
+          </div>
+          <div class="scriptorplugin-right-column">
+            <a href="https://github.com/FlowJo-LLC/EmailNotification-Plugin">Email Notification</a>: Sends auto-generated email notifications when a FlowJo client workspace is saved. This plugin promotes communication about changes to the FlowJo workspace. Email notifications may be sent to recipients when the FlowJo workspace is saved in the FlowJo client.<br>
+            <small><font color="CCCCCC">Image credit:
+              <a href="https://thenounproject.com/jim.slatton.1/">Jim Slatton</a>,
+              <a href="https://thenounproject.com">The Noun Project</a>,
+              <a href="http://creativecommons.org/licenses/by/3.0/us/">Creative Commons</a> license.</font></small>
+            </div>
+          </div>
+
+  <div class="scriptorplugin-row" id="pluginListing">
     <div class="scriptorplugin-left-column">
       <img class="image-class" id="FlowCleanPluginIcon" src="iconRef"></img>
     </div>
@@ -84,58 +123,6 @@ The plugin should now be ready for use. Most plugins are accessed from the Works
         <a href="https://thenounproject.com/search/?q=spray+bottle&i=7154">Julieta Felix</a>,
         <a href="https://thenounproject.com">The Noun Project</a>,
         <a href="http://creativecommons.org/licenses/by/3.0/us/">Creative Commons</a> license.</font></small>
-    </div>
-  </div>
-
-  <div class="scriptorplugin-row" id="pluginListing">
-    <div class="scriptorplugin-left-column">
-      <img class="image-class" id="emailNotificationPluginIcon"  src="iconRef"></img>
-    </div>
-    <div class="scriptorplugin-right-column" style="padding-top:33px">
-      <a href="https://github.com/FlowJo-LLC/EmailNotification-Plugin">Email Notification</a>: Sends auto-generated email notifications when a FlowJo client workspace is saved. This plugin promotes communication about changes to the FlowJo workspace. Email notifications may be sent to recipients when the FlowJo workspace is saved in the FlowJo client.<br>
-      <small><font color="CCCCCC">Image credit:
-        <a href="https://thenounproject.com/jim.slatton.1/">Jim Slatton</a>,
-        <a href="https://thenounproject.com">The Noun Project</a>,
-        <a href="http://creativecommons.org/licenses/by/3.0/us/">Creative Commons</a> license.</font></small>
-      </div>
-    </div>
-
-<div class="scriptorplugin-row" id="pluginListing">
-    <div class="scriptorplugin-left-column">
-    <img class="image-class" id="autoGatingPluginIcon"  src="iconRef"></img>
-  </div>
-  <div class="scriptorplugin-right-column">
-    <a href="https://github.com/FlowJo-LLC/AutoGating-Plugin">Auto-Gating</a>: Allows FlowJo users to make distinct gates around their samples based on child-parent percentages. This plugin generates an optimal sub-population that matches a user's specified percentage.<br>
-    <small><font color="CCCCCC">Image credit:
-      <a href="https://thenounproject.com/AlfredoCreates/">Alfredo Hernandez</a>,
-      <a href="https://thenounproject.com">The Noun Project</a>,
-      <a href="http://creativecommons.org/licenses/by/3.0/us/">Creative Commons</a> license.</font></small>
-    </div>
-  </div>
-
-  <div class="scriptorplugin-row" id="pluginListing">
-    <div class="scriptorplugin-left-column">
-    <img class="image-class" id="opticsPluginIcon"  src="iconRef"></img>
-  </div>
-  <div class="scriptorplugin-right-column">
-    <a href="https://github.com/FlowJo-LLC/OPTICS-Plugin">OPTICS</a>: Allows users to perform density-based reordering and cluster detection on populations within FlowJo. This population plugin performs density-based reordering and cluster detection to extract the clusters present in a population node. The user may select what parameters they wish to cluster the data on.<br>
-    <small><font color="CCCCCC">Image credit:
-      <a href="https://thenounproject.com/delwar/">Delwar Hossain</a>,
-      <a href="https://thenounproject.com">The Noun Project</a>,
-      <a href="http://creativecommons.org/licenses/by/3.0/us/">Creative Commons</a> license.</font></small>
-    </div>
-  </div>
-
-  <div class="scriptorplugin-row" id="pluginListing">
-    <div class="scriptorplugin-left-column">
-    <img class="image-class" id="awsS3PluginIcon"  src="iconRef"></img>
-  </div>
-  <div class="scriptorplugin-right-column">
-    <a href="https://github.com/FlowJo-LLC/FlowJo-AWS-S3-Plugin">AWS-S3</a>: Uploads FlowJo workspace files to an AWS S3 server. Using the AWS S3 service with FlowJo gives one the ability to upload and download workspaces as a remote backup or share workspace environments with others. The user attaches his or her workspace to a specific S3 bucket, and the workspace is uploaded to this bucket when the workspace is saved.<br>
-    <small><font color="CCCCCC">Image credit:
-      <a href="https://thenounproject.com/prosymbols/">ProSymbols</a>,
-      <a href="https://thenounproject.com">The Noun Project</a>,
-      <a href="http://creativecommons.org/licenses/by/3.0/us/">Creative Commons</a> license.</font></small>
     </div>
   </div>
 
@@ -151,6 +138,19 @@ The plugin should now be ready for use. Most plugins are accessed from the Works
       <a href="http://creativecommons.org/licenses/by/3.0/us/">Creative Commons</a> license.</font></small>
     </div>
   </div>
+
+    <div class="scriptorplugin-row" id="pluginListing">
+      <div class="scriptorplugin-left-column">
+      <img class="image-class" id="opticsPluginIcon"  src="iconRef"></img>
+    </div>
+    <div class="scriptorplugin-right-column">
+      <a href="https://github.com/FlowJo-LLC/OPTICS-Plugin">OPTICS</a>: Allows users to perform density-based reordering and cluster detection on populations within FlowJo. This population plugin performs density-based reordering and cluster detection to extract the clusters present in a population node. The user may select what parameters they wish to cluster the data on.<br>
+      <small><font color="CCCCCC">Image credit:
+        <a href="https://thenounproject.com/delwar/">Delwar Hossain</a>,
+        <a href="https://thenounproject.com">The Noun Project</a>,
+        <a href="http://creativecommons.org/licenses/by/3.0/us/">Creative Commons</a> license.</font></small>
+      </div>
+    </div>
 
 </div>
 
@@ -249,6 +249,92 @@ The plugin should now be ready for use. Most plugins are accessed from the Works
 <p>Some of us spend our weekend playing with visualizations (yes, seriously), and we'll post some here with some instructions for use. </p>
 
 <h2>
+  <a id="4-shipped" class="anchor" href="#4-shipped" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>4. Shipped Plugins</h2>
+
+  <p>The plugins listed below are included with FlowJo v10.1r7 and later. We include them here in case you need to update or re-install them. They can be installed in the same manner as any other plugin&mdash;see How to Install FlowJo Plugins above or our <a href="http://docs.flowjo.com/d2/plugins/installing-plugins/">plugin documentation</a> for details.</p>
+
+  <div class="container">
+
+    <br>
+
+    <div class="scriptorplugin-row" id="pluginListing">
+      <div class="scriptorplugin-left-column">
+      <img class="image-class" id="CellOntologyIcon" src="iconRef"></img>
+    </div>
+    <div class="scriptorplugin-right-column">
+      <a href="https://github.com/FlowJo-LLC/CellOntology-Plugin">Cell Ontology</a>: Determines the name and etiology of a gated cell or population by querying a published set of cell type definitions.<br>
+      <small><font color="CCCCCC">Image credit:
+        <a Href="https://thenounproject.com/iconmafia/">Icon Mafia</a>,
+        <a href="https://thenounproject.com">The Noun Project</a>,
+        <a href="http://creativecommons.org/licenses/by/3.0/us/">Creative Commons</a> license.</font></small>
+      </div>
+    </div>
+
+    <br>
+
+    <div class="scriptorplugin-row" id="pluginListing">
+      <div class="scriptorplugin-left-column">
+      <img class="image-class" id="DownSampleIcon" src="iconRef"></img>
+    </div>
+    <div class="scriptorplugin-right-column">
+      <a href="https://github.com/FlowJo-LLC/DownSample-Plugin">DownSample</a>: Creates a new gate containing a specified subset of data points or events, which can be used like any other gated subset or population node within FlowJo.<br>
+      <small><font color="CCCCCC">Image credit:
+        <a Href="https://thenounproject.com/creativestall/">Creative Stall</a>,
+        <a href="https://thenounproject.com">The Noun Project</a>,
+        <a href="http://creativecommons.org/licenses/by/3.0/us/">Creative Commons</a> license.</font></small>
+      </div>
+    </div>
+
+        <br>
+
+    <div class="scriptorplugin-row" id="pluginListing">
+      <div class="scriptorplugin-left-column">
+      <img class="image-class" id="FlowMeansIcon" src="iconRef"></img>
+    </div>
+    <div class="scriptorplugin-right-column">
+      <a href="https://github.com/FlowJo-LLC/FlowMeans-Plugin">FlowMeans</a>: Automatically identifies cell populations in flow cytometry data using K-means clustering.<br>
+      <small><font color="CCCCCC">Image credit:
+        <a Href="https://thenounproject.com/dergraph/">Thomas Helbig</a>,
+        <a href="https://thenounproject.com">The Noun Project</a>,
+        <a href="http://creativecommons.org/licenses/by/3.0/us/">Creative Commons</a> license.</font></small>
+      </div>
+    </div>
+
+        <br>
+
+    <div class="scriptorplugin-row" id="pluginListing">
+      <div class="scriptorplugin-left-column">
+      <img class="image-class" id="SpadeIcon" src="iconRef"></img>
+    </div>
+    <div class="scriptorplugin-right-column">
+      <a href="https://github.com/FlowJo-LLC/Spade-Plugin">Spade</a>: Visualizes mass cytometry data, creating a network graph file (GML), PDF output, and adding a "cluster" column to FCS files.<br>
+      <small><font color="CCCCCC">Image credit:
+        <a Href="https://thenounproject.com/ecem.afacan.5/">Ecem Afacan</a>,
+        <a href="https://thenounproject.com">The Noun Project</a>,
+        <a href="http://creativecommons.org/licenses/by/3.0/us/">Creative Commons</a> license.</font></small>
+      </div>
+    </div>
+
+        <br>
+
+        <div class="scriptorplugin-row" id="pluginListing">
+          <div class="scriptorplugin-left-column">
+          <img class="image-class" id="tSNEIcon" src="iconRef"></img>
+        </div>
+        <div class="scriptorplugin-right-column">
+          <a href="https://github.com/FlowJo-LLC/TSNE-Plugin">t-SNE</a>: Visualizing reduced data dimensions while still maintaining the structure of the data.<br>
+          <small><font color="CCCCCC">Image credit:
+            <a Href="https://thenounproject.com/paulstevens/">Paul Stevens</a>,
+            <a href="https://thenounproject.com">The Noun Project</a>,
+            <a href="http://creativecommons.org/licenses/by/3.0/us/">Creative Commons</a> license.</font></small>
+          </div>
+        </div>
+
+        <br>
+
+</div>
+
+<h2>
 <a id="need-to-cite-the-exchange" class="anchor" href="#need-to-cite-the-exchange" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Need to cite the Exchange?</h2>
 
 <p>If you use these tools in your research, please give credit as follows:</p>
@@ -308,7 +394,7 @@ The plugin should now be ready for use. Most plugins are accessed from the Works
             document.getElementById("awsS3PluginIcon").src = newUrl + "/images/FlowJo-AWS-S3.png";
             document.getElementById("LIMSPluginIcon").src = newUrl + "/images/LIMS-Integrator.png";
 
-            document.getElementById("FlowCleanPluginIcon_Feature").src = newUrl + "/images/FlowClean.png";
+            document.getElementById("OpticsPluginIcon_Feature").src = newUrl + "/images/Optics.png";
 
             document.getElementById("FlowCleanPluginIcon").src = newUrl + "/images/FlowClean.png";
             document.getElementById("IndexSortingIcon").src = newUrl + "/images/Clustering.png";
@@ -316,6 +402,12 @@ The plugin should now be ready for use. Most plugins are accessed from the Works
             document.getElementById("CollectionOrderSortIcon").src = newUrl + "/images/AnnotationTools.png";
             document.getElementById("ControlBasedInclusionGatingIcon").src = newUrl + "/images/DataReductionAlgorithms.png";
             document.getElementById("RelativeGateIcon").src = newUrl + "/images/DataPreprocAndNorm.png";
+
+            document.getElementById("CellOntologyIcon").src = newUrl + "/images/CellOntology.png";
+            document.getElementById("DownSampleIcon").src = newUrl + "/images/DownSample.png";
+            document.getElementById("FlowMeansIcon").src = newUrl + "/images/flowMeans.png";
+            document.getElementById("SpadeIcon").src = newUrl + "/images/Spade.png";
+            document.getElementById("tSNEIcon").src = newUrl + "/images/tSNE.png";
 
 
           </script>
