@@ -26,15 +26,17 @@
 <p>Don't worry, we are pretty obsessive about documentation. Each script, plugin, or visualization we provide includes instructions that step you through how to use it, and we urge others who post to do the same. No JavaScript, HTML, or black belt skills are required.</p>
 
 
-<h2>Featured: Optics Plugin</h2>
+<h2>Featured: Cell Ontology Plugin</h2>
 
-<p>The OPTICS plugin performs density-based reordering and cluster detection to extract the clusters present in a population node. The user may select what parameters they wish to cluster the data on. The user may also specify the minimum points the algorithm requires to define a cluster, and the percent drop (ξ) that will signify the start of a new cluster. The clusters found will appear as sub-populations under the population on which the plugin was run.</p>
+<p>The Cell Ontology plugin queries a cell ontology database and matches the cell or population in your FlowJo workspace to specific cell types. Almost all applications in flow cytometry rely on phenotype markers, and the <a href="https://bioportal.bioontology.org/ontologies/CL">CellOntology database</a> maintains a record of published definitions of cell types with a myriad of phenotypic markers and their associated functions, etiologies, or biological contexts.</p>
+<p>This plugin retrieves suggested nomenclature based on a ranking score, creating a single CSV file containing suggested names and a cladogram detailing your cells' relationship to other known cell types. <strong>Note:</strong> This plugin uses the flowCL package within an R statistical computing environment.</p>
+<p>This is a new version of this plugin, and is recommended for users of FlowJo 10.2 or later.</p>
 <table>
 <tr>
-  <td style="border:0px"><img id="OpticsPluginIcon_Feature" src="iconRef"></img></td>
-<td style="border:0px" valign="top"><a href="https://github.com/FlowJo-LLC/OPTICS-Plugin">Download the plugin now</a>
+  <td style="border:12px"><img id="CellOntologyIcon_Feature" src="iconRef"></img></td>
+<td style="border:0px" valign="top"><a href="https://github.com/FlowJo-LLC/CellOntology-Plugin">Download the plugin now</a>
   <br>
-<a href="https://www.gitbook.com/book/flowjollc/optics-plugin-developer-documentation/details">View the plugin documentation</a></td>
+<a href="http://docs.flowjo.com/d2/plugins/cellontology/">View the plugin documentation</a></td>
 </tr>
 </table
 </p>
@@ -42,12 +44,20 @@
 
 <h1><a id="there-are-3-types-of-tools-you-will-find-here-which-can-all-be-used-with-flowjo" class="anchor" href="#there-are-3-types-of-tools-you-will-find-here-which-can-all-be-used-with-flowjo" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Tool types</h1>
 
-<p>There are four types of tools here, which can all be used with FlowJo.</p>
+<p>There are four types of tools here, which can all be used with FlowJo:</p>
+
+<ol>
+  <li><a href="#2-plug-ins">Plugins</a>
+  <li><a href="#1-scripts">Scripts</a>
+  <li><a href="#3-visualizations">Visualizations</a>
+  <li><a href="#4-shipped">Shipped Plugins</a>
+</ol>
 
 <h2>
 <a id="2-plug-ins" class="anchor" href="#2-plug-ins" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>1. Plugins (NEW)</h2>
 
-<p>Yeah, we can cluster that.  If you have an algorithm or application that needs to do something upon opening or saving, OR you would like exported population data and user-specified parameters passed to your application, we can do that.  In fact, we can bring the clusters back into FlowJo so everyone can use what you have written.  To learn more, please see our FlowJo for developers page (coming soon). </p>
+
+<p>Yeah, we can cluster that.  If you have an algorithm or application that needs to do something upon opening or saving, or you would like exported population data and user-specified parameters passed to your application, we can do that.  In fact, we can bring the clusters back into FlowJo so everyone can use what you have written.  To learn more, please see our FlowJo for Developers page (coming soon). </p>
 
 <p><strong>Note:</strong> You must be running FlowJo version 10.1r7 or higher to use plugins. Earlier versions do not support plugins.</p>
 
@@ -68,7 +78,7 @@
 <li>Re-start FlowJo.</li>
 </ul>
 
-The plugin should now be ready for use. Most plugins are accessed from the Workspace ribbon, Populations band, Plugins task. See the User Guide section of the plugin’s <a href="https://www.gitbook.com/search?q=FlowJo">documentation</a> for instructions on how to use the newly-installed plugin.
+The plugin should now be ready for use. You access most plugins from the Workspace ribbon, Populations band, Plugins task. See the User Guide section of the plugin’s <a href="https://www.gitbook.com/search?q=FlowJo">documentation</a> for instructions on how to use the newly-installed plugin.
 
 <h3>Available Plugins</h3>
 
@@ -92,7 +102,7 @@ The plugin should now be ready for use. Most plugins are accessed from the Works
         <img class="image-class" id="awsS3PluginIcon"  src="iconRef"></img>
       </div>
       <div class="scriptorplugin-right-column">
-        <a href="https://github.com/FlowJo-LLC/FlowJo-AWS-S3-Plugin">AWS-S3</a>: Uploads FlowJo workspace files to an AWS S3 server. Using the AWS S3 service with FlowJo gives one the ability to upload and download workspaces as a remote backup or share workspace environments with others. The user attaches his or her workspace to a specific S3 bucket, and the workspace is uploaded to this bucket when the workspace is saved.<br>
+        <a href="https://github.com/FlowJo-LLC/FlowJo-AWS-S3-Plugin">AWS-S3</a>: Uploads FlowJo workspace files to an AWS S3 server. Using the AWS S3 service with FlowJo gives you the ability to upload and download workspaces as a remote backup or share workspace environments with others. The user attaches his or her workspace to a specific S3 bucket, and the workspace is uploaded to this bucket when the workspace is saved.<br>
         <small><font color="CCCCCC">Image credit:
           <a href="https://thenounproject.com/prosymbols/">ProSymbols</a>,
           <a href="https://thenounproject.com">The Noun Project</a>,
@@ -105,7 +115,7 @@ The plugin should now be ready for use. Most plugins are accessed from the Works
             <img class="image-class" id="emailNotificationPluginIcon"  src="iconRef"></img>
           </div>
           <div class="scriptorplugin-right-column">
-            <a href="https://github.com/FlowJo-LLC/EmailNotification-Plugin">Email Notification</a>: Sends auto-generated email notifications when a FlowJo client workspace is saved. This plugin promotes communication about changes to the FlowJo workspace. Email notifications may be sent to recipients when the FlowJo workspace is saved in the FlowJo client.<br>
+            <a href="https://github.com/FlowJo-LLC/EmailNotification-Plugin">Email Notification</a>: Sends auto-generated email notifications when a FlowJo client workspace is saved. This communication promotes changes to the FlowJo workspace. Email notifications may be sent to recipients when the FlowJo workspace is saved in the FlowJo client.<br>
             <small><font color="CCCCCC">Image credit:
               <a href="https://thenounproject.com/jim.slatton.1/">Jim Slatton</a>,
               <a href="https://thenounproject.com">The Noun Project</a>,
@@ -120,7 +130,7 @@ The plugin should now be ready for use. Most plugins are accessed from the Works
     <div class="scriptorplugin-right-column">
       <a href="https://github.com/FlowJo-LLC/flowClean-Plugin">FlowClean</a>: Automatically identifies and flags fluorescence anomalies in flow cytometry data so that these can be easily removed. This algorithm uses the R statistical computing environment.<br>
       <small><font color="CCCCCC">Image credit:
-        <a href="https://thenounproject.com/search/?q=spray+bottle&i=7154">Julieta Felix</a>,
+        <a href="https://thenounproject.com/julietafelix/">Julieta Felix</a>,
         <a href="https://thenounproject.com">The Noun Project</a>,
         <a href="http://creativecommons.org/licenses/by/3.0/us/">Creative Commons</a> license.</font></small>
     </div>
@@ -144,7 +154,7 @@ The plugin should now be ready for use. Most plugins are accessed from the Works
       <img class="image-class" id="opticsPluginIcon"  src="iconRef"></img>
     </div>
     <div class="scriptorplugin-right-column">
-      <a href="https://github.com/FlowJo-LLC/OPTICS-Plugin">OPTICS</a>: Allows users to perform density-based reordering and cluster detection on populations within FlowJo. This population plugin performs density-based reordering and cluster detection to extract the clusters present in a population node. The user may select what parameters they wish to cluster the data on.<br>
+      <a href="https://github.com/FlowJo-LLC/OPTICS-Plugin">OPTICS</a>: Allows users to perform density-based reordering and cluster detection on populations within FlowJo. This population plugin performs density-based reordering and cluster detection to extract the clusters present in a population node. The user can select what parameters they wish to cluster the data on.<br>
       <small><font color="CCCCCC">Image credit:
         <a href="https://thenounproject.com/delwar/">Delwar Hossain</a>,
         <a href="https://thenounproject.com">The Noun Project</a>,
@@ -157,13 +167,13 @@ The plugin should now be ready for use. Most plugins are accessed from the Works
   <h2>
   <a id="1-scripts" class="anchor" href="#1-scripts" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>2. Scripts</h2>
 
-  <p>FlowJo's script editor is integrated directly into the core of FlowJo, and gives real-time access to statistics, gates, groups, and metadata to create custom analysis tools within FlowJo. This access makes it easy for: </p>
+  <p>FlowJo's Script Editor is integrated directly into the core of FlowJo, and gives real-time access to statistics, gates, groups, and metadata to create custom analysis tools within FlowJo. This access makes it easy for: </p>
   <ul>
     <li>Developers to write code that will be executed within the program using JavaScript.</li>
-    <li>Biologists to drop some of the scripts hosted here into FlowJo to help with their particular application (such as index sorting).</li>
+    <li>Biologists to drop scripts—including the scripts hosted here—into FlowJo to help with their particular application (such as index sorting).</li>
   </ul>
 
-  <p>Scripts produced in the Script editor can be saved as text files, shared, and run by anyone in three clicks by loading them into a FlowJo workspace and clicking <strong>Run</strong>. </p>
+  <p>Scripts produced in the Script Editor can be saved as text files, shared, and run by anyone in three clicks by loading them into a FlowJo workspace and clicking Run. </p>
 
   <h3>Available Scripts</h3>
 
@@ -176,7 +186,7 @@ The plugin should now be ready for use. Most plugins are accessed from the Works
     <div class="scriptorplugin-right-column" style="padding-top: 16px">
     <a href="https://github.com/FlowJo-LLC/indexed-sorting">Indexed Sorting</a>: Compiles index sorting keywords and creates a gate for each cell, with the well location as the name.<br>
     <small><font color="CCCCCC">Image credit:
-      <a href="https://thenounproject.com/search/?similar=156870&i=78507">Hans Paul Mösl Junior</a>,
+      <a href="https://thenounproject.com/hansmosl/">Hans Paul Mösl Junior</a>,
       <a href="https://thenounproject.com">The Noun Project</a>,
       <a href="http://creativecommons.org/licenses/by/3.0/us/">Creative Commons</a> license.</font></small>
     </div>
@@ -262,7 +272,7 @@ The plugin should now be ready for use. Most plugins are accessed from the Works
       <img class="image-class" id="CellOntologyIcon" src="iconRef"></img>
     </div>
     <div class="scriptorplugin-right-column">
-      <a href="https://github.com/FlowJo-LLC/CellOntology-Plugin">Cell Ontology</a>: Determines the name and etiology of a gated cell or population by querying a published set of cell type definitions.<br>
+      <a href="https://github.com/FlowJo-LLC/CellOntology-Plugin">Cell Ontology</a>: <strong>New Version!</strong> Determines the name and etiology of a gated cell or population by querying a published set of cell type definitions. This plugin uses the R statistical computing environment.<br>
       <small><font color="CCCCCC">Image credit:
         <a Href="https://thenounproject.com/iconmafia/">Icon Mafia</a>,
         <a href="https://thenounproject.com">The Noun Project</a>,
@@ -394,7 +404,7 @@ The plugin should now be ready for use. Most plugins are accessed from the Works
             document.getElementById("awsS3PluginIcon").src = newUrl + "/images/FlowJo-AWS-S3.png";
             document.getElementById("LIMSPluginIcon").src = newUrl + "/images/LIMS-Integrator.png";
 
-            document.getElementById("OpticsPluginIcon_Feature").src = newUrl + "/images/Optics.png";
+            document.getElementById("CellOntologyIcon_Feature").src = newUrl + "/images/CellOntology.png";
 
             document.getElementById("FlowCleanPluginIcon").src = newUrl + "/images/FlowClean.png";
             document.getElementById("IndexSortingIcon").src = newUrl + "/images/Clustering.png";
