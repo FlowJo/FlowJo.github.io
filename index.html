@@ -26,17 +26,18 @@
 <p>Don't worry, we are pretty obsessive about documentation. Each script, plugin, or visualization we provide includes instructions that step you through how to use it, and we urge others who post to do the same. No JavaScript, HTML, or black belt skills are required.</p>
 
 
-<h2>Featured: Cell Ontology Plugin</h2>
+<h2>Featured: Email Notification Plugin</h2>
 
-<p>The Cell Ontology plugin queries a cell ontology database and matches the cell or population in your FlowJo workspace to specific cell types. Almost all applications in flow cytometry rely on phenotype markers, and the <a href="https://bioportal.bioontology.org/ontologies/CL">CellOntology database</a> maintains a record of published definitions of cell types with a myriad of phenotypic markers and their associated functions, etiologies, or biological contexts.</p>
-<p>This plugin retrieves suggested nomenclature based on a ranking score, creating a single CSV file containing suggested names and a cladogram detailing your cells' relationship to other known cell types. <strong>Note:</strong> This plugin uses the flowCL package within an R statistical computing environment.</p>
-<p>This is a new version of this plugin, and is recommended for users of FlowJo 10.2 or later.</p>
+<p>The Email Notification plugin allows you to send auto-generated, customizable email notifications to specified recipients when a FlowJo client workspace is saved. These notifications can ensure your team is up to date on changes to the FlowJo workspace.</p>
+<p>While this plugin is installed, whenever you save a workspace, you are presented with a dialog box.  This dialog box prompts you to specify one or more recipients to receive the notifications. You can also attach a custom message to all the notifications. All settings are saved in a preference file and repopulate the window the next time you save the workspace.</p>
+<p><strong>Note:</strong> This plugin uses the JavaMail API release 1.5.5, and requires an internet connection to be available at the time the notifications are sent.</p>
+
 <table>
 <tr>
-  <td style="border:12px"><img id="CellOntologyIcon_Feature" src="iconRef"></img></td>
-<td style="border:0px" valign="top"><a href="https://github.com/FlowJo-LLC/CellOntology-Plugin">Download the plugin now</a>
+  <td style="border:12px"><img id="emailNotificationPluginIcon_Feature" src="iconRef"></img></td>
+<td style="border:10px" valign="middle"><a href="https://github.com/FlowJo-LLC/EmailNotification-Plugin">Download the plugin now</a>
   <br>
-<a href="http://docs.flowjo.com/d2/plugins/cellontology/">View the plugin documentation</a></td>
+<a href="https://flowjollc.gitbooks.io/email-notification-flowjo-plugin/content/">View the plugin documentation</a></td>
 </tr>
 </table
 </p>
@@ -74,7 +75,7 @@
 </ul>
 <li>Follow the link on this page for the desired plugin.</li>
 <li>In the file list, click the link for the file ending in .jar, then click the Download button.</li>
-<li>In the Downloads folder on your computer, locate the downloaded JAR file on your computer, and move it into the Plugins folder.</li>
+<li>In the Downloads folder on your computer, locate the downloaded JAR file, and move it into the Plugins folder.</li>
 <li>Re-start FlowJo.</li>
 </ul>
 
@@ -112,10 +113,10 @@ The plugin should now be ready for use. You access most plugins from the Workspa
 
       <div class="scriptorplugin-row" id="pluginListing">
           <div class="scriptorplugin-left-column">
-            <img class="image-class" id="emailNotificationPluginIcon"  src="iconRef"></img>
+            <img class="image-class" id="emailNotificationPluginIcon" src="iconRef"></img>
           </div>
           <div class="scriptorplugin-right-column">
-            <a href="https://github.com/FlowJo-LLC/EmailNotification-Plugin">Email Notification</a>: Sends auto-generated email notifications when a FlowJo client workspace is saved. This communication promotes changes to the FlowJo workspace. Email notifications may be sent to recipients when the FlowJo workspace is saved in the FlowJo client.<br>
+            <a href="https://github.com/FlowJo-LLC/EmailNotification-Plugin">Email Notification</a>: Sends auto-generated email notifications when a FlowJo client workspace is saved, updating your team regarding changes to the FlowJo workspace. A dialog box is presented upon each save, allowing you to specify recipients and an additional custom message.<br>
             <small><font color="CCCCCC">Image credit:
               <a href="https://thenounproject.com/jim.slatton.1/">Jim Slatton</a>,
               <a href="https://thenounproject.com">The Noun Project</a>,
@@ -404,7 +405,7 @@ The plugin should now be ready for use. You access most plugins from the Workspa
             document.getElementById("awsS3PluginIcon").src = newUrl + "/images/FlowJo-AWS-S3.png";
             document.getElementById("LIMSPluginIcon").src = newUrl + "/images/LIMS-Integrator.png";
 
-            document.getElementById("CellOntologyIcon_Feature").src = newUrl + "/images/CellOntology.png";
+            document.getElementById("emailNotificationPluginIcon_Feature").src = newUrl + "/images/EmailNotification.png";
 
             document.getElementById("FlowCleanPluginIcon").src = newUrl + "/images/FlowClean.png";
             document.getElementById("IndexSortingIcon").src = newUrl + "/images/Clustering.png";
