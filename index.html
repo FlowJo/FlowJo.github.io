@@ -26,18 +26,22 @@
 <p>Don't worry, we are pretty obsessive about documentation. Each script, plugin, or visualization we provide includes instructions that step you through how to use it, and we urge others who post to do the same. No JavaScript, HTML, or black belt skills are required.</p>
 
 
-<h2>Featured: Email Notification Plugin</h2>
+<h2>Featured: AWS S3 Plugin</h2>
 
-<p>The Email Notification plugin allows you to send auto-generated, customizable email notifications to specified recipients when a FlowJo client workspace is saved. These notifications can ensure your team is up to date on changes to the FlowJo workspace.</p>
-<p>While this plugin is installed, whenever you save a workspace, you are presented with a dialog box.  This dialog box prompts you to specify one or more recipients to receive the notifications. You can also attach a custom message to all the notifications. All settings are saved in a preference file and repopulate the window the next time you save the workspace.</p>
-<p><strong>Note:</strong> This plugin uses the JavaMail API release 1.5.5, and requires an internet connection to be available at the time the notifications are sent.</p>
+<p>The AWS S3 Plugin uploads and downloads FlowJo workspace files to an Amazon Web Services S3 server. You can use this capability as a remote backup or to share workspace environments with other users. Within the plugin, you can use existing S3 buckets within an Amazon S3 account, select a different bucket, or create new buckets.</p>
+<p>You can set the plugin to:
+  <ul>
+    <li>Synchronize your workspace with a copy in an external bucket each time you open the workspace, ensuring you have all the latest updates from your team, and </li>
+    <li>Upload the workspace to a bucket every time you save, ensuring all your latest changes are available to your team.</li>
+    </ul></p>
+<p><strong>Note:</strong> This plugin requires an existing Amazon S3 account and credentials to access the AWS S3 buckets.</p>
 
 <table>
 <tr>
-  <td style="border:12px"><img id="emailNotificationPluginIcon_Feature" src="iconRef"></img></td>
-<td style="border:10px" valign="middle"><a href="https://github.com/FlowJo-LLC/EmailNotification-Plugin">Download the plugin now</a>
+  <td style="border:12px"><img id="awsS3PluginIcon_Feature" src="iconRef"></img></td>
+<td style="border:10px" valign="middle"><a href="https://github.com/FlowJo-LLC/FlowJo-AWS-S3-Plugin">Download the plugin now</a>
   <br>
-<a href="https://flowjollc.gitbooks.io/email-notification-flowjo-plugin/content/">View the plugin documentation</a></td>
+<a href="https://flowjollc.gitbooks.io/flowjo-aws-s3-plugin-documentation/content/">View the plugin documentation</a></td>
 </tr>
 </table
 </p>
@@ -103,7 +107,7 @@ The plugin should now be ready for use. You access most plugins from the Workspa
         <img class="image-class" id="awsS3PluginIcon"  src="iconRef"></img>
       </div>
       <div class="scriptorplugin-right-column">
-        <a href="https://github.com/FlowJo-LLC/FlowJo-AWS-S3-Plugin">AWS-S3</a>: Uploads FlowJo workspace files to an AWS S3 server. Using the AWS S3 service with FlowJo gives you the ability to upload and download workspaces as a remote backup or share workspace environments with others. The user attaches his or her workspace to a specific S3 bucket, and the workspace is uploaded to this bucket when the workspace is saved.<br>
+        <a href="https://github.com/FlowJo-LLC/FlowJo-AWS-S3-Plugin">AWS S3</a>: Uploads FlowJo workspace files to an Amazon Web Services S3 server. Using the AWS S3 service with FlowJo gives you the ability to upload and download workspaces as a remote backup or share workspace environments with others. The user attaches his or her workspace to a specific S3 bucket, and the workspace is uploaded to this bucket when the workspace is saved.<br>
         <small><font color="CCCCCC">Image credit:
           <a href="https://thenounproject.com/prosymbols/">ProSymbols</a>,
           <a href="https://thenounproject.com">The Noun Project</a>,
@@ -405,7 +409,7 @@ The plugin should now be ready for use. You access most plugins from the Workspa
             document.getElementById("awsS3PluginIcon").src = newUrl + "/images/FlowJo-AWS-S3.png";
             document.getElementById("LIMSPluginIcon").src = newUrl + "/images/LIMS-Integrator.png";
 
-            document.getElementById("emailNotificationPluginIcon_Feature").src = newUrl + "/images/EmailNotification.png";
+            document.getElementById("awsS3PluginIcon_Feature").src = newUrl + "/images/FlowJo-AWS-S3.png";
 
             document.getElementById("FlowCleanPluginIcon").src = newUrl + "/images/FlowClean.png";
             document.getElementById("IndexSortingIcon").src = newUrl + "/images/Clustering.png";
