@@ -21,33 +21,37 @@
       <h1>
 <a id="welcome-to-the-exchange" class="anchor" href="#welcome-to-the-exchange" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Welcome to the Exchange</h1>
 
-<p>The FlowJo Exchange is a repository maintained by <a href="http://www.flowjo.com">FlowJo, LLC</a> that allows users to upload annotated scripts and download shared scripts. Plugins are a new addition to the Exchange that allow users to create their own extended functionality for the FlowJo application. The open plugin architecture introduced with 10.1r7 allows FlowJo users access to cutting-edge tools that can be integrated into their current FlowJo analysis workflows, so any tool can be integrated into FlowJo.</p>
+<p>The FlowJo Exchange is a repository maintained by <a href="http://www.flowjo.com">FlowJo, LLC</a> that allows users to upload annotated scripts and download shared scripts. Plugins are a new addition to the Exchange that allow users to create their own extended functionality for the FlowJo<sup>®</sup> application. The open plugin architecture introduced with 10.1r7 allows FlowJo users access to cutting-edge tools that can be integrated into their current FlowJo analysis workflows, so any tool can be integrated into FlowJo.</p>
 
 <p>Don't worry, we are pretty obsessive about documentation. Each script, plugin, or visualization we provide includes instructions that step you through how to use it, and we urge others who post to do the same. No JavaScript, HTML, or black belt skills are required.</p>
 
 
-<h2>Featured: AWS S3 Plugin</h2>
+<h2>Featured: LIMS Integrator Plugin</h2>
 
-<p>The AWS S3 Plugin uploads and downloads FlowJo workspace files to an Amazon Web Services S3 server. You can use this capability as a remote backup or to share workspace environments with other users. Within the plugin, you can use existing S3 buckets within an Amazon S3 account, select a different bucket, or create new buckets.</p>
-<p>You can set the plugin to:
-  <ul>
-    <li>Synchronize your workspace with a copy in an external bucket each time you open the workspace, ensuring you have all the latest updates from your team, and </li>
-    <li>Upload the workspace to a bucket every time you save, ensuring all your latest changes are available to your team.</li>
-    </ul></p>
-<p><strong>Note:</strong> This plugin requires an existing Amazon S3 account and credentials to access the AWS S3 buckets.</p>
+<p>The LIMS integrator plugin integrates the user information associated with a FlowJo workspace with a PostgreSQL database. Once the PostgreSQL server is set up, all other configuration, including database and table creation, is handled by the plugin. The user can then track operations related to the workspace, such as:</p>
+<ul>
+<li>Names of users who access the workspace</li>
+<li>Name of the workspace accessed</li>
+<li>Times the workspace is opened or saved</li>
+</ul>
+<p>The PostgreSQL database can be set to update either when the workspace is opened or when the workspace is saved. Users can download data from the database, either as a .log file or a .csv file, to a chosen location on the user's local disk.</p>
+<p>All of the above options can be changed from within the plugin.</p>
+<p><strong>Note:</strong> This plugin requires an existing PostgreSQL database server.</p>
 
 <table>
 <tr>
-  <td style="border:12px"><img id="awsS3PluginIcon_Feature" src="iconRef"></img></td>
-<td style="border:10px" valign="middle"><a href="https://github.com/FlowJo-LLC/FlowJo-AWS-S3-Plugin">Download the plugin now</a>
+  <td style="border:12px"><img id="LIMSPluginIcon_Feature" src="iconRef"></img></td>
+<td style="border:10px" valign="middle">
+  <a href="https://github.com/FlowJo-LLC/LIMS-Integrator-Plugin">Download the plugin now</a>
   <br>
-<a href="https://flowjollc.gitbooks.io/flowjo-aws-s3-plugin-documentation/content/">View the plugin documentation</a></td>
+<a href="https://flowjollc.gitbooks.io/lims-integrator-plugin/content/">View the plugin documentation</a></td>
 </tr>
 </table
-</p>
+</a>
 
 
-<h1><a id="there-are-3-types-of-tools-you-will-find-here-which-can-all-be-used-with-flowjo" class="anchor" href="#there-are-3-types-of-tools-you-will-find-here-which-can-all-be-used-with-flowjo" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Tool types</h1>
+<h1>
+  <a id="there-are-3-types-of-tools-you-will-find-here-which-can-all-be-used-with-flowjo" class="anchor" href="#there-are-3-types-of-tools-you-will-find-here-which-can-all-be-used-with-flowjo" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Tool Types</h1>
 
 <p>There are four types of tools here, which can all be used with FlowJo:</p>
 
@@ -59,7 +63,7 @@
 </ol>
 
 <h2>
-<a id="2-plug-ins" class="anchor" href="#2-plug-ins" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>1. Plugins (NEW)</h2>
+  <a id="2-plug-ins" class="anchor" href="#2-plug-ins" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>1. Plugins (NEW)</h2>
 
 
 <p>Yeah, we can cluster that.  If you have an algorithm or application that needs to do something upon opening or saving, or you would like exported population data and user-specified parameters passed to your application, we can do that.  In fact, we can bring the clusters back into FlowJo so everyone can use what you have written.  To learn more, please see our FlowJo for Developers page (coming soon). </p>
@@ -409,7 +413,7 @@ The plugin should now be ready for use. You access most plugins from the Workspa
             document.getElementById("awsS3PluginIcon").src = newUrl + "/images/FlowJo-AWS-S3.png";
             document.getElementById("LIMSPluginIcon").src = newUrl + "/images/LIMS-Integrator.png";
 
-            document.getElementById("awsS3PluginIcon_Feature").src = newUrl + "/images/FlowJo-AWS-S3.png";
+            document.getElementById("LIMSPluginIcon_Feature").src = newUrl + "/images/LIMS-Integrator.png";
 
             document.getElementById("FlowCleanPluginIcon").src = newUrl + "/images/FlowClean.png";
             document.getElementById("IndexSortingIcon").src = newUrl + "/images/Clustering.png";
