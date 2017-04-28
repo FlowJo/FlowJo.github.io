@@ -25,30 +25,22 @@
 
 <p>Don't worry, we are pretty obsessive about documentation. Each script, plugin, or visualization we provide includes instructions that step you through how to use it, and we urge others who post to do the same. No JavaScript, HTML, or black belt skills are required.</p>
 
+<h2>Featured: VR FlowJo Plugin</h2>
 
-<h2>Featured: LIMS Integrator Plugin</h2>
-
-<p>The LIMS integrator plugin integrates the user information associated with a FlowJo workspace with a PostgreSQL database. Once the PostgreSQL server is set up, all other configuration, including database and table creation, is handled by the plugin. The user can then track operations related to the workspace, such as:</p>
-<ul>
-<li>Names of users who access the workspace</li>
-<li>Name of the workspace accessed</li>
-<li>Times the workspace is opened or saved</li>
-</ul>
-<p>The PostgreSQL database can be set to update either when the workspace is opened or when the workspace is saved. Users can download data from the database, either as a .log file or a .csv file, to a chosen location on the user's local disk.</p>
-<p>All of the above options can be changed from within the plugin.</p>
-<p><strong>Note:</strong> This plugin requires an existing PostgreSQL database server.</p>
+<p>The Virtual Reality FlowJo Plugin attempts a linear regression and one-dimensional plotting within virtual reality using Google Cardboard, Three.JS, and D3.JS for FlowJo cytometry data.</p>
+<p>The user selects a population name and parameter data from a dialog box, and the plugin creates a CSV file that is then used to generate the 1-D visualization. The plugin uses the AutoGater plugin's getContourPoints function to collect the set of points representing each contour as a list of points, which are then combined into a list of lists that represent the full contour graph. Finally, these points are converted to a single list of points. Each point in the set of contours is added to the simple regression, and then the slope and intercept of the regression are returned as doubles.</p>
+<p><strong>Note:</strong> This is a third-party plugin. This plugin has had limited internal review by FlowJo, and support may be limited.</p>
 
 <table>
 <tr>
-  <td style="border:12px"><img id="LIMSPluginIcon_Feature" src="iconRef"></img></td>
+  <td style="border:12px"><img id="VRPluginIcon_Feature" src="iconRef"></img></td>
 <td style="border:10px" valign="middle">
-  <a href="https://github.com/FlowJo-LLC/LIMS-Integrator-Plugin">Download the plugin now</a>
+  <a href="https://github.com/anandpatel23/VR-FlowJo-Plugin">Download the plugin now</a>
   <br>
-<a href="https://flowjollc.gitbooks.io/lims-integrator-plugin/content/">View the plugin documentation</a></td>
+<a href="https://anandpatel23.gitbooks.io/vr-flowjo-plugin/content/">View the plugin documentation</a></td>
 </tr>
 </table
 </a>
-
 
 <h1>
   <a id="there-are-3-types-of-tools-you-will-find-here-which-can-all-be-used-with-flowjo" class="anchor" href="#there-are-3-types-of-tools-you-will-find-here-which-can-all-be-used-with-flowjo" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Tool Types</h1>
@@ -64,7 +56,6 @@
 
 <h2>
   <a id="2-plug-ins" class="anchor" href="#2-plug-ins" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>1. Plugins (NEW)</h2>
-
 
 <p>Yeah, we can cluster that.  If you have an algorithm or application that needs to do something upon opening or saving, or you would like exported population data and user-specified parameters passed to your application, we can do that.  In fact, we can bring the clusters back into FlowJo so everyone can use what you have written.  To learn more, please see our FlowJo for Developers page (coming soon). </p>
 
@@ -281,7 +272,7 @@ The plugin should now be ready for use. You access most plugins from the Workspa
       <img class="image-class" id="CellOntologyIcon" src="iconRef"></img>
     </div>
     <div class="scriptorplugin-right-column">
-      <a href="https://github.com/FlowJo-LLC/CellOntology-Plugin">Cell Ontology</a>: <strong>New Version!</strong> Determines the name and etiology of a gated cell or population by querying a published set of cell type definitions. This plugin uses the R statistical computing environment.<br>
+      <a href="https://github.com/FlowJo-LLC/CellOntology-Plugin">Cell Ontology</a>: Determines the name and etiology of a gated cell or population by querying a published set of cell type definitions. This plugin uses the R statistical computing environment.<br>
       <small><font color="CCCCCC">Image credit:
         <a Href="https://thenounproject.com/iconmafia/">Icon Mafia</a>,
         <a href="https://thenounproject.com">The Noun Project</a>,
@@ -413,7 +404,7 @@ The plugin should now be ready for use. You access most plugins from the Workspa
             document.getElementById("awsS3PluginIcon").src = newUrl + "/images/FlowJo-AWS-S3.png";
             document.getElementById("LIMSPluginIcon").src = newUrl + "/images/LIMS-Integrator.png";
 
-            document.getElementById("LIMSPluginIcon_Feature").src = newUrl + "/images/LIMS-Integrator.png";
+            document.getElementById("VRPluginIcon_Feature").src = newUrl + "/images/Optics.png";
 
             document.getElementById("FlowCleanPluginIcon").src = newUrl + "/images/FlowClean.png";
             document.getElementById("IndexSortingIcon").src = newUrl + "/images/Clustering.png";
