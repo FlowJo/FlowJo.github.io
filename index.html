@@ -23,21 +23,19 @@
 
 <p>The FlowJo Exchange is a repository maintained by <a href="http://www.flowjo.com">FlowJo, LLC</a> that allows users to upload annotated scripts and download shared scripts. Plugins are a new addition to the Exchange that allow users to create their own extended functionality for the FlowJo<sup>®</sup> application. The open plugin architecture introduced with 10.1r7 allows FlowJo users access to cutting-edge tools that can be integrated into their current FlowJo analysis workflows, so any tool can be integrated into FlowJo.</p>
 
-<p>Don't worry, we are pretty obsessive about documentation. Each script, plugin, or visualization we provide includes instructions that step you through how to use it, and we urge others who post to do the same. No JavaScript, HTML, or black belt skills are required.</p>
+<p>Don't worry, we are really pretty obsessive about documentation. Each script, plugin, or visualization we provide includes instructions that step you through how to use it, and we urge others who post to do the same. No JavaScript, HTML, or black belt skills are required.</p>
 
-<h2>Featured: VR FlowJo Plugin</h2>
+<h2>Featured: Advanced Relative Gate Script</h2>
 
-<p>The Virtual Reality FlowJo Plugin attempts a linear regression and one-dimensional plotting within virtual reality using Google Cardboard, Three.JS, and D3.JS for FlowJo cytometry data.</p>
-<p>The user selects a population name and parameter data from a dialog box, and the plugin creates a CSV file that is then used to generate the 1-D visualization. The plugin uses the AutoGater plugin's getContourPoints function to collect the set of points representing each contour as a list of points, which are then combined into a list of lists that represent the full contour graph. Finally, these points are converted to a single list of points. Each point in the set of contours is added to the simple regression, and then the slope and intercept of the regression are returned as doubles.</p>
-<p><strong>Note:</strong> This is a third-party plugin. This plugin has had limited internal review by FlowJo, and support may be limited.</p>
+<p>This script allows a FlowJo user to designate a gate hierarchy—the master—to be automatically copied to other samples within a group. The resulting gates are linked back to the master, meaning any changes to the master are immediately reflected in the linked gates. Functionality of this script is controlled by several variables, which identify the master gates, the group in which linked gates can be created, and the gate parameter axes.</p>
+<p><strong>Note:</strong> This script currently supports only rectangular gates. Linked gates must be within the same group as the master; however, you can make multiple copies of the script, each working within different groups and/or with different gates.</p>
 
 <table>
 <tr>
-  <td style="border:12px"><img id="VRPluginIcon_Feature" src="iconRef"></img></td>
+  <td style="border:12px"><img id="AdvRelGate_Feature" src="iconRef"></img></td>
 <td style="border:10px" valign="middle">
-  <a href="https://github.com/anandpatel23/VR-FlowJo-Plugin">Download the plugin now</a>
-  <br>
-<a href="https://anandpatel23.gitbooks.io/vr-flowjo-plugin/content/">View the plugin documentation</a></td>
+  <a href="https://github.com/FlowJo-LLC/Advance-Relative-Gate-Script">Download the plugin now, or view the plugin documentation</a>
+  </td>
 </tr>
 </table
 </a>
@@ -83,6 +81,19 @@ The plugin should now be ready for use. You access most plugins from the Workspa
 <h3>Available Plugins</h3>
 
 <div class="container">
+
+  <div class="scriptorplugin-row" id="pluginListing">
+      <div class="scriptorplugin-left-column">
+      <img class="image-class" id="VRPluginIcon"  src="iconRef"></img>
+    </div>
+    <div class="scriptorplugin-right-column">
+      <a href="https://github.com/anandpatel23/VR-FlowJo-Plugin">Virtual Reality</a>: The Virtual Reality FlowJo Plugin attempts a linear regression and one-dimensional plotting within virtual reality based on a selected population and parameter data. <strong>Note:</strong> This is a third-party plugin. This plugin has had limited internal review by FlowJo, and support may be limited.<br>
+      <small><font color="CCCCCC">Image credit:
+        <a href="https://thenounproject.com/delwar/">Delwar Hossain</a>,
+        <a href="https://thenounproject.com">The Noun Project</a>,
+        <a href="http://creativecommons.org/licenses/by/3.0/us/">Creative Commons</a> license.</font></small>
+      </div>
+    </div>
 
   <div class="scriptorplugin-row" id="pluginListing">
       <div class="scriptorplugin-left-column">
@@ -199,7 +210,7 @@ The plugin should now be ready for use. You access most plugins from the Workspa
       <img class="image-class" id="BasicLoopIcon" src="iconRef"></img>
     </div>
     <div class="scriptorplugin-right-column">
-      <a href="https://github.com/FlowJo-LLC/Basic-Loop">Basic Loop</a>: Basic loop tool in JavaScript to initialize a new project from.<br>
+      <a href="https://github.com/FlowJo-LLC/Basic-Loop">Basic Loop</a>: Initializes a new project using a simple loop tool in JavaScript.<br>
       <small><font color="CCCCCC">Image credit:
       <a href="https://thenounproject.com/rflor/">Rflor</a>,
       <a href="https://thenounproject.com">The Noun Project</a>,
@@ -398,13 +409,14 @@ The plugin should now be ready for use. You access most plugins from the Workspa
               console.log("newUrl= " + newUrl);
             }
 
+            document.getElementById("VRPluginIcon").src = newUrl + "/images/Optics.png";
             document.getElementById("emailNotificationPluginIcon").src = newUrl + "/images/EmailNotification.png";
             document.getElementById("autoGatingPluginIcon").src = newUrl + "/images/AutoGating.png";
             document.getElementById("opticsPluginIcon").src = newUrl + "/images/Optics.png";
             document.getElementById("awsS3PluginIcon").src = newUrl + "/images/FlowJo-AWS-S3.png";
             document.getElementById("LIMSPluginIcon").src = newUrl + "/images/LIMS-Integrator.png";
 
-            document.getElementById("VRPluginIcon_Feature").src = newUrl + "/images/Optics.png";
+            document.getElementById("AdvRelGate_Feature").src = newUrl + "/images/Miscellaneous.png";
 
             document.getElementById("FlowCleanPluginIcon").src = newUrl + "/images/FlowClean.png";
             document.getElementById("IndexSortingIcon").src = newUrl + "/images/Clustering.png";
