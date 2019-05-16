@@ -27,9 +27,9 @@
 
       <p font color="000000"> <b>Note:</b> Plugins and their associated dependancies have not yet been fully tested with the latest version of R (v3.6). <font color="DC143C"> We recommend using R version 3.5.3 for the time being.</font></p>
  
+ http://fjinstallers.s3-us-west-2.amazonaws.com/Plugins/SC3_v0.6.zip     
       
-      
-<h2>Featured: CBA Analysis Plugin for Convenient Investigation of the Popular Cytometric Bead Array Kit Data, Directly within FlowJo!</h2>
+<h2>Featured: Single-Cell Consensus Clustering (SC3) plugin for SeqGeq</h2>
       
 
 <p></p>
@@ -40,14 +40,14 @@
 <tr>
   <td style="text-align:center; border: 1px solid transparent" valign="top" width="120"> 
 
-      <img src="http://fjinstallers.s3-us-west-2.amazonaws.com/Plugins/CBA.png" height="100" width="100"></img>  
+      <img src="http://fjinstallers.s3-us-west-2.amazonaws.com/Plugins/SC3_highRes.png" height="100" width="75"></img>  
    
   </td>
 <td style="border:20px" valign="middle">
-  <a href="http://fjinstallers.s3-us-west-2.amazonaws.com/Plugins/CBA_v2.1.zip">CBA</a>: Calibrates multiple parameters simultaniously, using Cytometric Bead Array kit data. <b>Note:</b> The current implimentation only clusters based on a single univariate parameter.<br>  
+  <a href="">SC3</a>: Uses an unbiased hierarchical clustering algorithm developed by <a href="https://github.com/hemberg-lab/">the Hemberg Lab</a> to identify subpopulations and associated differentially expressed genesets in single-cell RNA sequencing datasets.<br>  
   <small><font color="CCCCCC">Image credit: 
      <a href="http://creativecommons.org/licenses/by/3.0/us/">Creative Commons</a> license.</font></small><br>
-  <small><font color="CCCCCC">Beta release - tested with FlowJo v10.5.3.</small><br>
+  <small><font color="CCCCCC">Tested with SeqGeq v1.5.0</small><br>
   </td>
 </tr>
     </table>
@@ -301,11 +301,28 @@ The plugin should now be ready for use. You access most plugins from the Workspa
 <p></p>
 
 
+
+
+
+
     
 <h3>Available FlowJo Plugins</h3>
 <p><small><font color="CCCCCC">To Install all available FlowJo plugins (as of Feb2019) download from this link:</font> <a href="http://fjinstallers.s3.amazonaws.com/Plugins/FlowJo%20Plugins.zip">Get 'Em All!</small></a>
 
 <div class="container">
+  
+  <div class="scriptorplugin-row" id="pluginListing">
+      <div class="scriptorplugin-left-column">
+      <img class="image-class" id="CBA" src="http://fjinstallers.s3-us-west-2.amazonaws.com/Plugins/CBA.png" height="50" width="50"></img>
+    </div>
+  <div class="scriptorplugin-right-column">
+  <a href="http://fjinstallers.s3-us-west-2.amazonaws.com/Plugins/CBA_v2.1.zip">CBA</a>: Calibrates multiple parameters simultaniously, using Cytometric Bead Array kit data. <b>Note:</b> The current implimentation only clusters based on a single univariate parameter.<br>
+  <small><font color="CCCCCC">Tested with FlowJo v10.5.3.</font></small><br>
+    <small><font color="CCCCCC">Current Version: 2.1</font></small><br>
+      <small><font color="CCCCCC">Image credit:
+        <a href="http://creativecommons.org/licenses/by/3.0/us/">Creative Commons</a> license.</font></small>
+      </div>
+    </div>
 
 <div class="scriptorplugin-row" id="pluginListing">
       <div class="scriptorplugin-left-column">
@@ -313,7 +330,8 @@ The plugin should now be ready for use. You access most plugins from the Workspa
     </div>
   <div class="scriptorplugin-right-column">
   <a href="https://fjinstallers.s3.amazonaws.com/Plugins/EmbedSOM_v0.2.zip">EmbedSOM</a>: Efficiently embed FlowSOM maps into 2D space for additional population resolution from high dimensional datasets.<br>
-  <small><font color="CCCCCC">Beta release - tested with FlowJo v10.5.3.</font></small><br>
+  <small><font color="CCCCCC">Tested with FlowJo v10.5.3.</font></small><br>
+    <small><font color="CCCCCC">Current Version: 0.2</font></small><br>
       <small><font color="CCCCCC">Image credit:
         <a href="http://creativecommons.org/licenses/by/3.0/us/">Creative Commons</a> license.</font></small>
       </div>
@@ -326,7 +344,7 @@ The plugin should now be ready for use. You access most plugins from the Workspa
     </div>
   <div class="scriptorplugin-right-column">
   <a href="http://fjinstallers.s3.amazonaws.com/Plugins/FitSNE_v0.5.zip">FitSNE</a>: Fast Fourier Transform-accelerated Interpolation-based t-SNE, aka “FitSNE”. A new dimensionality reduction algorithm based on the tSNE method, this plugin runs with both FlowJo and SeqGeq. The new technique improves speed and performance of the tSNE mapping calculations. Developed by Linderman et. al.<br>
-  <small><font color="CCCCCC">Beta release - tested with FlowJo v10.5.2.</font></small><br>
+  <small><font color="CCCCCC">Tested with FlowJo v10.5.2.</font></small><br>
       <small><font color="CCCCCC">Image credit:
         <a href="http://creativecommons.org/licenses/by/3.0/us/">Creative Commons</a> license.</font></small>
       </div>
@@ -339,7 +357,7 @@ The plugin should now be ready for use. You access most plugins from the Workspa
     </div>
     <div class="scriptorplugin-right-column">
       <a href="http://fjinstallers.s3.amazonaws.com/Plugins/ViolinBoxPlots_Plugin_v2.9.zip">ViolinBoxPlots</a>: This tool allows users to generate violin plots and box and whisker plots for multiple parameters and in comparison between populations using R libraries.<br>
-      <small><font color="CCCCCC">Beta release - tested with FlowJo v10.5</font></small><br>
+      <small><font color="CCCCCC">Tested with FlowJo v10.5</font></small><br>
       </div>
     </div>  
   
@@ -350,7 +368,7 @@ The plugin should now be ready for use. You access most plugins from the Workspa
     <div class="scriptorplugin-right-column">
       <a href="http://fjinstallers.s3.amazonaws.com/Plugins/PhenoGraph_v0.2.zip">PhenoGraph</a>: A clustering algorithm that automatically groups data into subpopulations, and was developed by J. Levine et al.<br>
       <p></p>
-        <small><font color="CCCCCC">Beta release - tested with FlowJo v10.4.2.</font></small><br>
+        <small><font color="CCCCCC">Tested with FlowJo v10.5.3.</font></small><br>
       </div>
     </div>  
 
@@ -361,7 +379,7 @@ The plugin should now be ready for use. You access most plugins from the Workspa
     <div class="scriptorplugin-right-column">
       <a href="http://fjinstallers.s3.amazonaws.com/Plugins/UMAP_v2.1.zip">UMAP</a>: Uniform Manifold Approximation and Projection (UMAP) is a machine learning algorithm used for dimensionality reduction to visualize high parameter datasets in a two dimensional space, an alternative to the very popular and widely used tSNE algorithm. The bioinformatics tool was developed by McInnes and Healy.<br>
       <p></p>
-      <small><font color="CCCCCC">Beta release - tested with FlowJo v10.4.2.</font></small><br>
+      <small><font color="CCCCCC">Tested with FlowJo v10.4.2.</font></small><br>
       </div>
     </div>
   
@@ -371,7 +389,7 @@ The plugin should now be ready for use. You access most plugins from the Workspa
     </div>
     <div class="scriptorplugin-right-column">
       <a href="http://fjinstallers.s3.amazonaws.com/Plugins/AutoCatGate_v2.6.zip">Auto-Gate for Categorical Parameters</a>: This tool allows users to automatically gate categorical parameters.<br>
-      <small><font color="CCCCCC">Beta release - tested with FlowJo v10.5.</font></small><br>
+      <small><font color="CCCCCC">Tested with FlowJo v10.5.</font></small><br>
       <small><font color="CCCCCC">Image credit:
         <a href="http://creativecommons.org/licenses/by/3.0/us/">Creative Commons</a> license.</font></small>
       </div>
